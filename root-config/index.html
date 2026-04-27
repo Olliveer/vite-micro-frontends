@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDITORA — root (single-spa + Vite)</title>
+  </head>
+  <body>
+    <header class="shell">
+      <strong class="shell__title">EDITORA — single-spa (Vite)</strong>
+      <nav class="shell__nav" aria-label="Microfrontends">
+        <a data-spa-link href="/login">Login</a>
+        <a data-spa-link href="/admin">Admin</a>
+        <a data-spa-link href="/student">Student</a>
+        <a data-spa-link href="/style-guide">Style Guide</a>
+      </nav>
+    </header>
+    <main id="single-spa-root" class="shell__main"></main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

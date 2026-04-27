@@ -1,0 +1,19 @@
+# Esta pasta é apenas para organização local — não versionar
+# Cada subprojeto tem seu próprio .git e .gitignore
+
+# Logs
+logs
+*.log
+
+# Editor
+.vscode/
+.idea/
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.temp

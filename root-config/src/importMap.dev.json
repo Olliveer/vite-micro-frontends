@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "@editora-single/login": "http://localhost:6281/src/spa.ts",
+    "@editora-single/admin": "http://localhost:6282/src/spa.ts",
+    "@editora-single/student": "http://localhost:6283/src/spa.ts",
+    "@editora-single/style-guide": "http://localhost:6284/src/spa.ts"
+  }
+}

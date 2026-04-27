@@ -1,0 +1,25 @@
+{
+  "name": "@editora-single/mfe-admin",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 6282",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --port 6282",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "single-spa-vue": "^3.0.1",
+    "vue": "^3.5.31"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vue/tsconfig": "^0.8.1",
+    "sass": "^1.97.2",
+    "typescript": "~5.9.3",
+    "vite": "^6.4.1",
+    "vite-plugin-single-spa": "^1.1.0",
+    "vue-tsc": "^3.2.4"
+  }
+}

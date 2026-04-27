@@ -1,0 +1,21 @@
+{
+  "name": "@editora-single/root-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 6280",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 6280",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "single-spa": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.3",
+    "typescript": "~5.9.3",
+    "vite": "^6.4.1",
+    "vite-plugin-single-spa": "^1.1.0"
+  }
+}
