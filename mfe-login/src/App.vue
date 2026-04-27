@@ -1,7 +1,10 @@
 <template>
   <div class="mfe mfe--login">
-    <p class="mfe__title">Login</p>
-    <p class="mfe__hint">MFE single-spa (espelho login-frontend)</p>
+    <nav class="mfe__nav">
+      <RouterLink class="mfe__link" to="/">Início</RouterLink>
+      <RouterLink class="mfe__link" to="/about">Sobre</RouterLink>
+    </nav>
+    <RouterView />
   </div>
 </template>
 
@@ -15,17 +18,28 @@
   background: rgba(21, 101, 192, 0.08);
   max-width: 36rem;
 
-  &__title {
-    margin: 0 0 0.5rem;
-    font-weight: 700;
-    font-size: 1.35rem;
-    color: #0d47a1;
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(21, 101, 192, 0.25);
   }
 
-  &__hint {
-    margin: 0;
+  &__link {
     font-size: 0.9rem;
-    color: #37474f;
+    color: #1565c0;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.router-link-active {
+      font-weight: 700;
+      text-decoration: underline;
+    }
   }
 }
 </style>

@@ -2,6 +2,9 @@ import { createApp, h } from "vue";
 import singleSpaVue from "single-spa-vue";
 import { cssLifecycleFactory } from "vite-plugin-single-spa/ex";
 import App from "./App.vue";
+import { createMfeRouter } from "./router";
+
+const router = createMfeRouter();
 
 const lifecycles = singleSpaVue({
   createApp,
@@ -10,6 +13,9 @@ const lifecycles = singleSpaVue({
     render() {
       return h(App);
     },
+  },
+  handleInstance(app) {
+    app.use(router);
   },
 });
 
