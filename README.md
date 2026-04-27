@@ -1,4 +1,4 @@
-# Workflow de Desenvolvimento - EDITORA Micro-frontends
+# Workflow de Desenvolvimento - Micro-frontends
 
 Este documento descreve como trabalhar com os micro-frontends (MFEs), que são **repositórios Git independentes** organizados na pasta `VITE_SINGLE` apenas para conveniência de desenvolvimento.
 
