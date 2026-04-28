@@ -9,7 +9,7 @@ export function createMfeRouter() {
     history: createMemoryHistory(BASE),
     routes: [
       { path: "/", name: "home", component: HomeView },
-      { path: "/about/:id", name: "about", component: AboutView },
+      { path: "/about/:id?", name: "about", component: AboutView },
     ],
   });
 }

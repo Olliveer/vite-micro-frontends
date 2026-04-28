@@ -2,11 +2,16 @@
   <div>
     <p class="mfe__title">Sobre o Admin</p>
     <p class="mfe__hint">Rota de exemplo: <code>/admin/about</code></p>
-    dmaiodhiaiudhiashdiudadasdsddddd ssssss
+
+    {{ route.params.id }}
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+</script>
 
 <style scoped lang="scss">
 .mfe__title {
