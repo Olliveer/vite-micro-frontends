@@ -1,6 +1,6 @@
 # mfe-student
 
-Micro-frontend de estudante para o sistema EDITORA, implementado com Vue 3 + Vite + single-spa.
+Micro-frontend de estudante (Vue 3 + Vite + single-spa).
 
 ## Tecnologias
 

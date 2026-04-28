@@ -1,5 +1,5 @@
 {
-  "name": "@editora-single/root-config",
+  "name": "root-config",
   "version": "0.0.0",
   "private": true,
   "type": "module",

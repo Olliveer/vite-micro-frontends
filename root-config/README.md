@@ -1,6 +1,6 @@
 # root-config
 
-Orquestrador single-spa para o sistema EDITORA. Responsável por carregar e gerenciar
+Orquestrador single-spa para micro-frontends. Responsável por carregar e gerenciar
 todos os micro-frontends (MFEs).
 
 ## Tecnologias

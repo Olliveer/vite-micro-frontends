@@ -1,6 +1,6 @@
 # mfe-login
 
-Micro-frontend de login para o sistema EDITORA, implementado com Vue 3 + Vite + single-spa.
+Micro-frontend de login (Vue 3 + Vite + single-spa).
 
 ## Tecnologias
 

@@ -1,6 +1,6 @@
 # mfe-admin
 
-Micro-frontend de administração para o sistema EDITORA, implementado com Vue 3 + Vite + single-spa.
+Micro-frontend de administração (Vue 3 + Vite + single-spa).
 
 ## Tecnologias
 

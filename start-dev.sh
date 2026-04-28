@@ -5,7 +5,7 @@
 
 set -e
 
-echo "🚀 Iniciando ambiente de desenvolvimento EDITORA..."
+echo "🚀 Iniciando ambiente de desenvolvimento (micro-frontends)..."
 echo ""
 
 # Função para matar processos nas portas específicas (se estiverem ocupadas)

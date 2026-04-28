@@ -1,6 +1,6 @@
 # mfe-style-guide
 
-Micro-frontend de guia de estilos para o sistema EDITORA, implementado com Vue 3 + Vite + single-spa.
+Micro-frontend de guia de estilos (Vue 3 + Vite + single-spa).
 
 ## Tecnologias
 

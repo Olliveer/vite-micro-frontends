@@ -1,3 +1,4 @@
+import { getSharedPinia } from "./shell";
 import { createApp, h } from "vue";
 import singleSpaVue from "single-spa-vue";
 import { cssLifecycleFactory } from "vite-plugin-single-spa/ex";
@@ -15,6 +16,7 @@ const lifecycles = singleSpaVue({
     },
   },
   handleInstance(app) {
+    app.use(getSharedPinia());
     router = createMfeRouter();
 
     router.afterEach((to) => {

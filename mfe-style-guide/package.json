@@ -1,8 +1,18 @@
 {
-  "name": "@editora-single/mfe-style-guide",
+  "name": "mfe-style-guide",
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "exports": {
+    "./components": {
+      "types": "./src/components/index.ts",
+      "default": "./src/components/index.ts"
+    },
+    "./shell": {
+      "types": "./src/shell/index.ts",
+      "default": "./src/shell/index.ts"
+    }
+  },
   "scripts": {
     "dev": "vite --port 6284",
     "build": "vue-tsc --noEmit && vite build",
@@ -10,11 +20,13 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "pinia": "^3.0.4",
     "single-spa-vue": "^3.0.1",
     "vue": "^3.5.31",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.4.1",
     "@vitejs/plugin-vue": "^6.0.6",
     "@vue/tsconfig": "^0.8.1",
     "sass": "^1.97.2",

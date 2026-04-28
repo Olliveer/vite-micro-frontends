@@ -22,21 +22,21 @@ function loadSpa(url: string) {
 }
 
 registerApplication({
-  name: "@editora-single/login",
+  name: "mfe-login",
   app: () => loadSpa(entries.login),
   activeWhen: (location) =>
     location.pathname === "/login" || location.pathname.startsWith("/login/"),
 });
 
 registerApplication({
-  name: "@editora-single/admin",
+  name: "mfe-admin",
   app: () => loadSpa(entries.admin),
   activeWhen: (location) =>
     location.pathname === "/admin" || location.pathname.startsWith("/admin/"),
 });
 
 registerApplication({
-  name: "@editora-single/student",
+  name: "mfe-student",
   app: () => loadSpa(entries.student),
   activeWhen: (location) =>
     location.pathname === "/student" ||
@@ -44,7 +44,7 @@ registerApplication({
 });
 
 registerApplication({
-  name: "@editora-single/style-guide",
+  name: "mfe-style-guide",
   app: () => loadSpa(entries.styleGuide),
   activeWhen: (location) =>
     location.pathname === "/style-guide" ||

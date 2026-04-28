@@ -1,8 +1,8 @@
 {
   "imports": {
-    "@editora-single/login": "http://localhost:6281/spa.js",
-    "@editora-single/admin": "http://localhost:6282/spa.js",
-    "@editora-single/student": "http://localhost:6283/spa.js",
-    "@editora-single/style-guide": "http://localhost:6284/spa.js"
+    "mfe-login": "http://localhost:6281/spa.js",
+    "mfe-admin": "http://localhost:6282/spa.js",
+    "mfe-student": "http://localhost:6283/spa.js",
+    "mfe-style-guide": "http://localhost:6284/spa.js"
   }
 }
