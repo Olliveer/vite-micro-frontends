@@ -2,7 +2,7 @@
   <div class="mfe mfe--admin">
     <nav class="mfe__nav">
       <RouterLink class="mfe__link" to="/">Início</RouterLink>
-      <RouterLink class="mfe__link" to="/about">Sobre</RouterLink>
+      <RouterLink class="mfe__link" :to="{ name: 'about', params: { id: '1' } }">Sobre</RouterLink>
     </nav>
     <RouterView />
   </div>

@@ -6,10 +6,15 @@ import "./shell.css";
  * URLs podem ser sobrescritas via variáveis de ambiente VITE_MFE_*_URL
  */
 const entries = {
-  login: import.meta.env.VITE_MFE_LOGIN_URL || "http://localhost:6281/src/spa.ts",
-  admin: import.meta.env.VITE_MFE_ADMIN_URL || "http://localhost:6282/src/spa.ts",
-  student: import.meta.env.VITE_MFE_STUDENT_URL || "http://localhost:6283/src/spa.ts",
-  styleGuide: import.meta.env.VITE_MFE_STYLE_GUIDE_URL || "http://localhost:6284/src/spa.ts",
+  login:
+    import.meta.env.VITE_MFE_LOGIN_URL || "http://localhost:6281/src/spa.ts",
+  admin:
+    import.meta.env.VITE_MFE_ADMIN_URL || "http://localhost:6282/src/spa.ts",
+  student:
+    import.meta.env.VITE_MFE_STUDENT_URL || "http://localhost:6283/src/spa.ts",
+  styleGuide:
+    import.meta.env.VITE_MFE_STYLE_GUIDE_URL ||
+    "http://localhost:6284/src/spa.ts",
 } as const;
 
 function loadSpa(url: string) {
@@ -46,12 +51,13 @@ registerApplication({
     location.pathname.startsWith("/style-guide/"),
 });
 
-start();
+/** Vue Router + single-spa: evita popstates redundantes quando só query/hash mudam. */
+start({ urlRerouteOnly: true });
 
 document.querySelectorAll<HTMLAnchorElement>("[data-spa-link]").forEach((a) => {
   a.addEventListener("click", (e) => {
     e.preventDefault();
-    navigateToUrl(a.getAttribute("href") ?? "/");
+    navigateToUrl(a.href);
   });
 });
 
