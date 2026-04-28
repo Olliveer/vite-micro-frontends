@@ -16,6 +16,14 @@ const lifecycles = singleSpaVue({
   },
   handleInstance(app) {
     router = createMfeRouter();
+
+    router.afterEach((to) => {
+      const full = BASE + (to.fullPath === "/" ? "" : to.fullPath);
+      if (window.location.pathname !== full) {
+        window.history.replaceState(window.history.state, "", full);
+      }
+    });
+
     app.use(router);
   },
 });
