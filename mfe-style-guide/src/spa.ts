@@ -2,9 +2,9 @@ import { createApp, h } from "vue";
 import singleSpaVue from "single-spa-vue";
 import { cssLifecycleFactory } from "vite-plugin-single-spa/ex";
 import App from "./App.vue";
-import { createMfeRouter } from "./router";
+import { BASE, createMfeRouter } from "./router";
 
-const router = createMfeRouter();
+let router: ReturnType<typeof createMfeRouter>;
 
 const lifecycles = singleSpaVue({
   createApp,
@@ -15,6 +15,7 @@ const lifecycles = singleSpaVue({
     },
   },
   handleInstance(app) {
+    router = createMfeRouter();
     app.use(router);
   },
 });
@@ -22,5 +23,12 @@ const lifecycles = singleSpaVue({
 const cssLc = cssLifecycleFactory("spa");
 
 export const bootstrap = [cssLc.bootstrap, lifecycles.bootstrap];
-export const mount = [cssLc.mount, lifecycles.mount];
+export const mount = [
+  cssLc.mount,
+  lifecycles.mount,
+  async () => {
+    const sub = window.location.pathname.slice(BASE.length) || "/";
+    await router.replace(sub);
+  },
+];
 export const unmount = [cssLc.unmount, lifecycles.unmount];

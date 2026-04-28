@@ -1,12 +1,12 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createMemoryHistory } from "vue-router";
 import AboutView from "../views/AboutView.vue";
 import HomeView from "../views/HomeView.vue";
 
-const BASE = "/admin";
+export const BASE = "/admin";
 
 export function createMfeRouter() {
   return createRouter({
-    history: createWebHistory(BASE),
+    history: createMemoryHistory(BASE),
     routes: [
       { path: "/", name: "home", component: HomeView },
       { path: "/about", name: "about", component: AboutView },
